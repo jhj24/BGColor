@@ -6,6 +6,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.RippleDrawable;
 import android.graphics.drawable.StateListDrawable;
+import android.support.annotation.NonNull;
 
 /**
  * View点击、选择背景样式
@@ -102,24 +103,6 @@ public class BGSelector {
                                       int lineColor, boolean isShowLeftLine, boolean isShowTopLine, boolean isShowRightLine, boolean isShowBottomLine) {
 
         float[] radio = new float[]{topLeftRadio, topLeftRadio, topRightRadio, topRightRadio, bottomRightRadio, bottomRightRadio, bottomLeftRadio, bottomLeftRadio};
-
-
-       /* new ShapeDrawable() {
-            Path framePath = new Path();
-            Paint framePaint = new Paint();
-
-            @Override
-            public void draw(Canvas canvas) {
-                super.draw(canvas);
-                RectF topLeftRect = new RectF();
-                topLeftRect.set(0f, 0f, topLeftRadio * 2f, topLeftRadio * 2f);
-                framePath.addArc(topLeftRect, -180, 90);
-                framePath.lineTo();
-
-
-                canvas.drawPath(framePath, framePaint);
-            }
-        };*/
 
         //边框
         GradientDrawable frameDrawable = new GradientDrawable();
