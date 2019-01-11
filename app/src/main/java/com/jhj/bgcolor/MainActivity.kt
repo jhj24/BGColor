@@ -68,6 +68,19 @@ class MainActivity : AppCompatActivity() {
         textView10.setOnClickListener {
             it.isSelected = !it.isSelected
         }
+
+        imageView1.setImageDrawable(BackGroundSelector.pressed(ContextCompat.getDrawable(this, R.drawable.main_home1),
+                ContextCompat.getDrawable(this, R.drawable.main_home0)))
+        imageView1.setOnClickListener {
+
+        }
+
+        imageView2.background = BackGroundSelector.selected(ContextCompat.getDrawable(this, R.drawable.main_home1),
+                ContextCompat.getDrawable(this, R.drawable.main_home0))
+        imageView2.setOnClickListener {
+            it.isSelected = !it.isSelected
+        }
+
     }
 
     fun getTColor(color: Int): Int {
