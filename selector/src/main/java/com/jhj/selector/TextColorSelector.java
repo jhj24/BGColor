@@ -7,21 +7,21 @@ import android.content.res.ColorStateList;
  * <p>
  * Created by jhj on 19-1-10.
  */
-public class TCSelector {
+public class TextColorSelector {
 
-    public static ColorStateList pressed(int pressed, int normal) {
+    public static ColorStateList pressed(int pressedColor, int normalColor) {
         int[][] states = new int[2][];
         states[0] = new int[]{android.R.attr.state_pressed, android.R.attr.state_enabled};
         states[1] = new int[]{};
-        int[] colors = new int[]{pressed, normal};
+        int[] colors = new int[]{pressedColor, normalColor};
         return new ColorStateList(states, colors);
     }
 
-    public static ColorStateList selected(int selected, int normal) {
+    public static ColorStateList selected(int selectedColor, int normalColor) {
         int[][] states = new int[2][];
         states[0] = new int[]{android.R.attr.state_selected, android.R.attr.state_enabled};
         states[1] = new int[]{};
-        int[] colors = new int[]{selected, normal};
+        int[] colors = new int[]{selectedColor, normalColor};
         return new ColorStateList(states, colors);
     }
 
