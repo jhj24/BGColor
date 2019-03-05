@@ -1,14 +1,12 @@
 package com.jhj.selector;
 
-import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.StateListDrawable;
-import android.support.v4.content.ContextCompat;
 
 /**
- * View点击、选择背景样式
+ * View 背景色以及点击、选择背景样式
  * <p>
  * Created by jhj on 19-1-9.
  */
@@ -260,13 +258,5 @@ public class BackGroundSelector {
                 isShowBottomFrame ? frameWidth : 0);
 
         return layerDrawable;
-    }
-
-    public static Drawable getTDrawable(Context context, int drawable) {
-        return ContextCompat.getDrawable(context, drawable);
-    }
-
-    public static int getTColor(Context context, int color) {
-        return ContextCompat.getColor(context, color);
     }
 }
