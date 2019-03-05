@@ -81,6 +81,8 @@ class MainActivity : AppCompatActivity() {
             it.isSelected = !it.isSelected
         }
 
+        textView11.background = BackGroundSelector.roundBackground(0xffff0000.toInt())
+
     }
 
     fun getTColor(color: Int): Int {

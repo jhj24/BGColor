@@ -1,9 +1,11 @@
 package com.jhj.selector;
 
+import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.StateListDrawable;
+import android.support.v4.content.ContextCompat;
 
 /**
  * View点击、选择背景样式
@@ -185,6 +187,13 @@ public class BackGroundSelector {
         return drawable;
     }
 
+    public static Drawable roundBackground(int color) {
+        GradientDrawable backgroundDrawable = new GradientDrawable();
+        backgroundDrawable.setShape(GradientDrawable.OVAL);
+        backgroundDrawable.setColor(color);
+        return backgroundDrawable;
+    }
+
 
     /**
      * View 背景色，可设置四角圆角半径
@@ -251,5 +260,13 @@ public class BackGroundSelector {
                 isShowBottomFrame ? frameWidth : 0);
 
         return layerDrawable;
+    }
+
+    public static Drawable getTDrawable(Context context, int drawable) {
+        return ContextCompat.getDrawable(context, drawable);
+    }
+
+    public static int getTColor(Context context, int color) {
+        return ContextCompat.getColor(context, color);
     }
 }
